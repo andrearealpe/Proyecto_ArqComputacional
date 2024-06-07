@@ -1,0 +1,677 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arquitectura: Referencia de la clase StateMachine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Arquitectura<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Clases</a> &#124;
+<a href="#pub-methods">Métodos públicos</a> &#124;
+<a href="#pri-types">Tipos privados</a> &#124;
+<a href="#pri-methods">Métodos privados</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
+<a href="class_state_machine-members.html">Lista de todos los miembros</a>  </div>
+  <div class="headertitle"><div class="title">Referencia de la clase StateMachine</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_state_machine_lib_8h_source.html">StateMachineLib.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state_machine_1_1_state.html">State</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_state_machine_1_1_transition.html">Transition</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a1c184149ecd646c1ec9da6cd81c35c6d" id="r_a1c184149ecd646c1ec9da6cd81c35c6d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c184149ecd646c1ec9da6cd81c35c6d">StateMachine</a> (uint8_t numStates, uint8_t numTransitions)</td></tr>
+<tr class="separator:a1c184149ecd646c1ec9da6cd81c35c6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae71bdc3ddeefe3826508f0846cb843d3" id="r_ae71bdc3ddeefe3826508f0846cb843d3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae71bdc3ddeefe3826508f0846cb843d3">AddTransition</a> (uint8_t inputState, uint8_t outputState, <a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition)</td></tr>
+<tr class="separator:ae71bdc3ddeefe3826508f0846cb843d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef04da6211ddbf547ddd88d538b6924f" id="r_aef04da6211ddbf547ddd88d538b6924f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef04da6211ddbf547ddd88d538b6924f">AddTransition</a> (uint8_t inputState, uint8_t outputState, <a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition, <a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action)</td></tr>
+<tr class="separator:aef04da6211ddbf547ddd88d538b6924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a615a72a631a781dd9ba740df4d343b88" id="r_a615a72a631a781dd9ba740df4d343b88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a615a72a631a781dd9ba740df4d343b88">SetTransition</a> (uint8_t transition, uint8_t inputState, uint8_t outputState, <a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition)</td></tr>
+<tr class="separator:a615a72a631a781dd9ba740df4d343b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc55432b2fe9ae6ffa1488dd27eab8b" id="r_a6bc55432b2fe9ae6ffa1488dd27eab8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bc55432b2fe9ae6ffa1488dd27eab8b">SetTransition</a> (uint8_t transition, uint8_t inputState, uint8_t outputState, <a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition, <a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action)</td></tr>
+<tr class="separator:a6bc55432b2fe9ae6ffa1488dd27eab8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b16cf11156e9601cc35238d7879ccaf" id="r_a4b16cf11156e9601cc35238d7879ccaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b16cf11156e9601cc35238d7879ccaf">RemoveTransition</a> (uint8_t transition)</td></tr>
+<tr class="separator:a4b16cf11156e9601cc35238d7879ccaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a282810c1f7b0d9a7320a8bc71b1ceba5" id="r_a282810c1f7b0d9a7320a8bc71b1ceba5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a282810c1f7b0d9a7320a8bc71b1ceba5">SetOnEntering</a> (uint8_t state, <a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action)</td></tr>
+<tr class="separator:a282810c1f7b0d9a7320a8bc71b1ceba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa30b53f362b55b468567b7be6b7bccb3" id="r_aa30b53f362b55b468567b7be6b7bccb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa30b53f362b55b468567b7be6b7bccb3">SetOnLeaving</a> (uint8_t state, <a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action)</td></tr>
+<tr class="separator:aa30b53f362b55b468567b7be6b7bccb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f032426c54da0f490ab2a29f2e89e43" id="r_a1f032426c54da0f490ab2a29f2e89e43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f032426c54da0f490ab2a29f2e89e43">ClearOnEntering</a> (uint8_t state)</td></tr>
+<tr class="separator:a1f032426c54da0f490ab2a29f2e89e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87645fbade2f0c8b161604e155b362c0" id="r_a87645fbade2f0c8b161604e155b362c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87645fbade2f0c8b161604e155b362c0">ClearOnLeaving</a> (uint8_t state)</td></tr>
+<tr class="separator:a87645fbade2f0c8b161604e155b362c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb4ecf2ee63abd61e306f0e371b7d35" id="r_aecb4ecf2ee63abd61e306f0e371b7d35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecb4ecf2ee63abd61e306f0e371b7d35">SetState</a> (uint8_t state, bool launchLeaving, bool launchEntering)</td></tr>
+<tr class="separator:aecb4ecf2ee63abd61e306f0e371b7d35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5b0c288ea2583867221607280b2605" id="r_a9b5b0c288ea2583867221607280b2605"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b5b0c288ea2583867221607280b2605">GetState</a> () const</td></tr>
+<tr class="separator:a9b5b0c288ea2583867221607280b2605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d40e86a64ce99a46b68037f2f6a454" id="r_ad3d40e86a64ce99a46b68037f2f6a454"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3d40e86a64ce99a46b68037f2f6a454">Update</a> ()</td></tr>
+<tr class="separator:ad3d40e86a64ce99a46b68037f2f6a454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Tipos privados</h2></td></tr>
+<tr class="memitem:a899fd917a478ef398252055a25a09726" id="r_a899fd917a478ef398252055a25a09726"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a>) ()</td></tr>
+<tr class="separator:a899fd917a478ef398252055a25a09726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae648388088bdec736a04df5046e52ac" id="r_aae648388088bdec736a04df5046e52ac"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a>) ()</td></tr>
+<tr class="separator:aae648388088bdec736a04df5046e52ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:a2dea417ce59bd3ba665e10360793a9d1" id="r_a2dea417ce59bd3ba665e10360793a9d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dea417ce59bd3ba665e10360793a9d1">initVariables</a> ()</td></tr>
+<tr class="separator:a2dea417ce59bd3ba665e10360793a9d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a0e7ebe6e2ba00c6e2a7230c7ca4c3173" id="r_a0e7ebe6e2ba00c6e2a7230c7ca4c3173"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_state_machine_1_1_state.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e7ebe6e2ba00c6e2a7230c7ca4c3173">_states</a></td></tr>
+<tr class="separator:a0e7ebe6e2ba00c6e2a7230c7ca4c3173"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96f754e4a81ce3565d2f38501f82f33" id="r_ad96f754e4a81ce3565d2f38501f82f33"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad96f754e4a81ce3565d2f38501f82f33">_numStates</a></td></tr>
+<tr class="separator:ad96f754e4a81ce3565d2f38501f82f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991bca0c6d776b17b0433ba8e2069a34" id="r_a991bca0c6d776b17b0433ba8e2069a34"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a991bca0c6d776b17b0433ba8e2069a34">_currentStateIndex</a></td></tr>
+<tr class="separator:a991bca0c6d776b17b0433ba8e2069a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb1251bcd3b366315e3be752acc46a7" id="r_abcb1251bcd3b366315e3be752acc46a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_state_machine_1_1_transition.html">Transition</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcb1251bcd3b366315e3be752acc46a7">_transitions</a></td></tr>
+<tr class="separator:abcb1251bcd3b366315e3be752acc46a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8476858f22250c291e090c201294c9" id="r_a7a8476858f22250c291e090c201294c9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a8476858f22250c291e090c201294c9">_numTransitions</a></td></tr>
+<tr class="separator:a7a8476858f22250c291e090c201294c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf447971ca25cd3773027aa1ff419942" id="r_acf447971ca25cd3773027aa1ff419942"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf447971ca25cd3773027aa1ff419942">_currentTransitionIndex</a></td></tr>
+<tr class="separator:acf447971ca25cd3773027aa1ff419942"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentación de los «Typedef» miembros de la clase</h2>
+<a id="aae648388088bdec736a04df5046e52ac" name="aae648388088bdec736a04df5046e52ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae648388088bdec736a04df5046e52ac">&#9670;&#160;</a></span>StateMachineAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* StateMachine::StateMachineAction) ()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a899fd917a478ef398252055a25a09726" name="a899fd917a478ef398252055a25a09726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899fd917a478ef398252055a25a09726">&#9670;&#160;</a></span>StateMachineCondition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef bool(* StateMachine::StateMachineCondition) ()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a1c184149ecd646c1ec9da6cd81c35c6d" name="a1c184149ecd646c1ec9da6cd81c35c6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c184149ecd646c1ec9da6cd81c35c6d">&#9670;&#160;</a></span>StateMachine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StateMachine::StateMachine </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>numStates</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>numTransitions</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones miembro</h2>
+<a id="ae71bdc3ddeefe3826508f0846cb843d3" name="ae71bdc3ddeefe3826508f0846cb843d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae71bdc3ddeefe3826508f0846cb843d3">&#9670;&#160;</a></span>AddTransition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StateMachine::AddTransition </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>inputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>outputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a></td>          <td class="paramname"><span class="paramname"><em>condition</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef04da6211ddbf547ddd88d538b6924f" name="aef04da6211ddbf547ddd88d538b6924f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef04da6211ddbf547ddd88d538b6924f">&#9670;&#160;</a></span>AddTransition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StateMachine::AddTransition </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>inputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>outputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a></td>          <td class="paramname"><span class="paramname"><em>condition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f032426c54da0f490ab2a29f2e89e43" name="a1f032426c54da0f490ab2a29f2e89e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f032426c54da0f490ab2a29f2e89e43">&#9670;&#160;</a></span>ClearOnEntering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::ClearOnEntering </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87645fbade2f0c8b161604e155b362c0" name="a87645fbade2f0c8b161604e155b362c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87645fbade2f0c8b161604e155b362c0">&#9670;&#160;</a></span>ClearOnLeaving()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::ClearOnLeaving </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b5b0c288ea2583867221607280b2605" name="a9b5b0c288ea2583867221607280b2605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5b0c288ea2583867221607280b2605">&#9670;&#160;</a></span>GetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StateMachine::GetState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dea417ce59bd3ba665e10360793a9d1" name="a2dea417ce59bd3ba665e10360793a9d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dea417ce59bd3ba665e10360793a9d1">&#9670;&#160;</a></span>initVariables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::initVariables </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b16cf11156e9601cc35238d7879ccaf" name="a4b16cf11156e9601cc35238d7879ccaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b16cf11156e9601cc35238d7879ccaf">&#9670;&#160;</a></span>RemoveTransition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::RemoveTransition </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>transition</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a282810c1f7b0d9a7320a8bc71b1ceba5" name="a282810c1f7b0d9a7320a8bc71b1ceba5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a282810c1f7b0d9a7320a8bc71b1ceba5">&#9670;&#160;</a></span>SetOnEntering()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::SetOnEntering </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa30b53f362b55b468567b7be6b7bccb3" name="aa30b53f362b55b468567b7be6b7bccb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa30b53f362b55b468567b7be6b7bccb3">&#9670;&#160;</a></span>SetOnLeaving()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::SetOnLeaving </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecb4ecf2ee63abd61e306f0e371b7d35" name="aecb4ecf2ee63abd61e306f0e371b7d35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb4ecf2ee63abd61e306f0e371b7d35">&#9670;&#160;</a></span>SetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::SetState </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>launchLeaving</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>launchEntering</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a615a72a631a781dd9ba740df4d343b88" name="a615a72a631a781dd9ba740df4d343b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a615a72a631a781dd9ba740df4d343b88">&#9670;&#160;</a></span>SetTransition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::SetTransition </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>transition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>inputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>outputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a></td>          <td class="paramname"><span class="paramname"><em>condition</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bc55432b2fe9ae6ffa1488dd27eab8b" name="a6bc55432b2fe9ae6ffa1488dd27eab8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc55432b2fe9ae6ffa1488dd27eab8b">&#9670;&#160;</a></span>SetTransition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StateMachine::SetTransition </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>transition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>inputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>outputState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a899fd917a478ef398252055a25a09726">StateMachineCondition</a></td>          <td class="paramname"><span class="paramname"><em>condition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aae648388088bdec736a04df5046e52ac">StateMachineAction</a></td>          <td class="paramname"><span class="paramname"><em>action</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3d40e86a64ce99a46b68037f2f6a454" name="ad3d40e86a64ce99a46b68037f2f6a454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d40e86a64ce99a46b68037f2f6a454">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool StateMachine::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de datos miembro</h2>
+<a id="a991bca0c6d776b17b0433ba8e2069a34" name="a991bca0c6d776b17b0433ba8e2069a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991bca0c6d776b17b0433ba8e2069a34">&#9670;&#160;</a></span>_currentStateIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StateMachine::_currentStateIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf447971ca25cd3773027aa1ff419942" name="acf447971ca25cd3773027aa1ff419942"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf447971ca25cd3773027aa1ff419942">&#9670;&#160;</a></span>_currentTransitionIndex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StateMachine::_currentTransitionIndex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad96f754e4a81ce3565d2f38501f82f33" name="ad96f754e4a81ce3565d2f38501f82f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad96f754e4a81ce3565d2f38501f82f33">&#9670;&#160;</a></span>_numStates</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StateMachine::_numStates</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a8476858f22250c291e090c201294c9" name="a7a8476858f22250c291e090c201294c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8476858f22250c291e090c201294c9">&#9670;&#160;</a></span>_numTransitions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t StateMachine::_numTransitions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e7ebe6e2ba00c6e2a7230c7ca4c3173" name="a0e7ebe6e2ba00c6e2a7230c7ca4c3173"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7ebe6e2ba00c6e2a7230c7ca4c3173">&#9670;&#160;</a></span>_states</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_state_machine_1_1_state.html">State</a>* StateMachine::_states</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abcb1251bcd3b366315e3be752acc46a7" name="abcb1251bcd3b366315e3be752acc46a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb1251bcd3b366315e3be752acc46a7">&#9670;&#160;</a></span>_transitions</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_state_machine_1_1_transition.html">Transition</a>* StateMachine::_transitions</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>C:/Users/earea/OneDrive/Escritorio/arquiFinal/<a class="el" href="_state_machine_lib_8h_source.html">StateMachineLib.h</a></li>
+<li>C:/Users/earea/OneDrive/Escritorio/arquiFinal/<a class="el" href="_state_machine_lib_8cpp.html">StateMachineLib.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

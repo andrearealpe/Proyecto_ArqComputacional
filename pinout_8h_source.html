@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arquitectura: Archivo de código fuente C:/Users/earea/OneDrive/Escritorio/arquiFinal/pinout.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Arquitectura<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8dd111f6e078504c38571839992d2956.html">arquiFinal</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">pinout.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pinout_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PINOUT_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PINOUT_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;AsyncTaskLib.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;LiquidCrystal.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;LiquidMenu.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;Keypad.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_state_machine_lib_8h.html">StateMachineLib.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;DHT.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Definiciones de los leds</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="pinout_8h.html#a31e20330f8ce94e0dd10b005a15c5898">   12</a></span><span class="preprocessor">#define LED_RED 7</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="pinout_8h.html#aca338dbd19d7940923334629f6e5f3b7">   13</a></span><span class="preprocessor">#define LED_GREEN 6</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="pinout_8h.html#ae2e40566d27689f8581d7b0f12271d45">   14</a></span><span class="preprocessor">#define LED_BLUE 9</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//Definiciones de los pines</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="pinout_8h.html#a456010749e02571badfd3c3741165fd8">   17</a></span><span class="preprocessor">#define PIN_LUZ A0</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="pinout_8h.html#a723ba67d140ba9cafdc1024d6afa9651">   18</a></span><span class="preprocessor">#define PIN_MAG A1</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="pinout_8h.html#a0b69fe924f32e6db1c7b7a21f7cd45a1">   19</a></span><span class="preprocessor">#define PIN_TEM 22</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="pinout_8h.html#ab65ef1b3904338ca7cea9a8b47e9b913">   20</a></span><span class="preprocessor">#define PIN_HUM 22</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="pinout_8h.html#ab1c2ed9cf44e17a7b4ffdb9df457d27d">   21</a></span><span class="preprocessor">#define BOTON 38</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//DefiniciÃ³n del Keypad</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="pinout_8h.html#a3cfd3aa62338d12609f6d65bce97e9cd">   24</a></span><span class="preprocessor">#define ROWS 4  </span><span class="comment">//four rows</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="pinout_8h.html#ab59ad2ee1a48b83c2eef1f019ed8cc48">   25</a></span><span class="preprocessor">#define COLS 4  </span><span class="comment">//four columns</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="pinout_8h.html#a856e873a1d14012d57ddb813c4a1e40a">   26</a></span><span class="keywordtype">char</span> <a class="code hl_variable" href="pinout_8h.html#a856e873a1d14012d57ddb813c4a1e40a">keys</a>[<a class="code hl_define" href="pinout_8h.html#a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</a>][<a class="code hl_define" href="pinout_8h.html#ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</a>] = {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  { <span class="charliteral">&#39;1&#39;</span>, <span class="charliteral">&#39;2&#39;</span>, <span class="charliteral">&#39;3&#39;</span>, <span class="charliteral">&#39;A&#39;</span> },</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  { <span class="charliteral">&#39;4&#39;</span>, <span class="charliteral">&#39;5&#39;</span>, <span class="charliteral">&#39;6&#39;</span>, <span class="charliteral">&#39;B&#39;</span> },</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  { <span class="charliteral">&#39;7&#39;</span>, <span class="charliteral">&#39;8&#39;</span>, <span class="charliteral">&#39;9&#39;</span>, <span class="charliteral">&#39;C&#39;</span> },</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  { <span class="charliteral">&#39;*&#39;</span>, <span class="charliteral">&#39;0&#39;</span>, <span class="charliteral">&#39;#&#39;</span>, <span class="charliteral">&#39;D&#39;</span> }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="pinout_8h.html#a6d6753e0ae098b31e2f84d4024e361cf">   32</a></span><span class="keywordtype">byte</span> <a class="code hl_variable" href="pinout_8h.html#a6d6753e0ae098b31e2f84d4024e361cf">rowPins</a>[<a class="code hl_define" href="pinout_8h.html#a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</a>] = { 22, 24, 26, 28 };  <span class="comment">//connect to the row pinouts of the keypad</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="pinout_8h.html#aa9fece7b062124080e4b2976f9a8b675">   33</a></span><span class="keywordtype">byte</span> <a class="code hl_variable" href="pinout_8h.html#aa9fece7b062124080e4b2976f9a8b675">colPins</a>[<a class="code hl_define" href="pinout_8h.html#ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</a>] = { 30, 32, 34, 36 };  <span class="comment">//connect to the column pinouts of the keypad</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="pinout_8h.html#a0e6c3cc7e8c762ab0ca1fa2296d7bbfe">   35</a></span>Keypad <a class="code hl_variable" href="pinout_8h.html#a0e6c3cc7e8c762ab0ca1fa2296d7bbfe">keypad</a> = Keypad(makeKeymap(<a class="code hl_variable" href="pinout_8h.html#a856e873a1d14012d57ddb813c4a1e40a">keys</a>), <a class="code hl_variable" href="pinout_8h.html#a6d6753e0ae098b31e2f84d4024e361cf">rowPins</a>, <a class="code hl_variable" href="pinout_8h.html#aa9fece7b062124080e4b2976f9a8b675">colPins</a>, <a class="code hl_define" href="pinout_8h.html#a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</a>, <a class="code hl_define" href="pinout_8h.html#ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//DefiniciÃ³n del LCD</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="pinout_8h.html#af97afdf00af0e116e9b5957f6a470fc2">   38</a></span>LiquidCrystal <a class="code hl_function" href="pinout_8h.html#af97afdf00af0e116e9b5957f6a470fc2">lcd</a>(12, 11,5, 4, 3, 2);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// Create new StateMachine</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="pinout_8h.html#a4d2ec6fd3a1844c88c33f1521df53a1d">   41</a></span><a class="code hl_class" href="class_state_machine.html">StateMachine</a> <a class="code hl_function" href="pinout_8h.html#a4d2ec6fd3a1844c88c33f1521df53a1d">stateMachine</a>(6, 12);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// State Alias</span></div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">   44</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7429777ed105978c319dd77880e3854a">   46</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7429777ed105978c319dd77880e3854a">Inicio</a> = 0,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a5c9e6911f4248ff02074469a6b247156">   47</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a5c9e6911f4248ff02074469a6b247156">Config</a> = 1,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a2f1ac349ec79332af9a94c3cd43c6921">   48</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a2f1ac349ec79332af9a94c3cd43c6921">MonitoreoAmbiental</a> = 2,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aac40392c8d00cac86ac30c30dbbc28ae">   49</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aac40392c8d00cac86ac30c30dbbc28ae">MonitorEventos</a> = 3,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a5853b2d9804fc5a6d3d1948c978c6dcb">   50</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a5853b2d9804fc5a6d3d1948c978c6dcb">Alarma</a> = 4,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_enumvalue" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a14e18a561f7c7198dc3e628a5ace726b">Bloqueado</a> = 5</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a14e18a561f7c7198dc3e628a5ace726b">   52</a></span>};</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// Input Alias</span></div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090">   55</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="pinout_8h.html#a080a822f0093973313bd644e517a5090">Input</a></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1bf4edb1863a9cf81e36160030da5c1e">   57</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1bf4edb1863a9cf81e36160030da5c1e">TimeOut3</a> = 0,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1f9b152c5df762a63878d95e6e99e22f">   58</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1f9b152c5df762a63878d95e6e99e22f">TimeOut4</a> = 1,</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a56aa6df5b5540ad526f94904afd98543">   59</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a56aa6df5b5540ad526f94904afd98543">TimeOut7</a> = 2,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a04af7b4a5123b070df238e2674f1a23e">   60</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a04af7b4a5123b070df238e2674f1a23e">TimeOut10</a> = 3,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a726c04f09eb02920d21155592c46fc3d">   61</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a726c04f09eb02920d21155592c46fc3d">ClaveCorrecta</a> = 4,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090ab9d75b8eaa112ea48f21325386889776">   62</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090ab9d75b8eaa112ea48f21325386889776">Boton</a> = 5,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a4e02c8ebeb341c896d4abe491773f0b4">   63</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a4e02c8ebeb341c896d4abe491773f0b4">SistemaBloqueado</a> = 6,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090af2fc8b59d622b78190126e678ef7a4f9">   64</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090af2fc8b59d622b78190126e678ef7a4f9">TempLuz</a> = 7,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090aac18d6e8370858cab2c3dc6623207a3c">   65</a></span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090aac18d6e8370858cab2c3dc6623207a3c">Hall</a> = 8,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb">Unknown</a> = 9</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb">   67</a></span>};</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">   69</a></span><a class="code hl_enumeration" href="pinout_8h.html#a080a822f0093973313bd644e517a5090">Input</a> <a class="code hl_variable" href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">input</a> = <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb">Unknown</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="pinout_8h.html#a6a1e4720fd7bbd1f81bebf1b3de0efec">   71</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a6a1e4720fd7bbd1f81bebf1b3de0efec">tempHigh</a> = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="pinout_8h.html#a94903018690fcd7ea22fe857aee17107">   72</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a94903018690fcd7ea22fe857aee17107">tempLow</a> = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="pinout_8h.html#a2b9930ebaec8233f157d5cbcc193b350">   73</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a2b9930ebaec8233f157d5cbcc193b350">luzHigh</a> = 0;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="pinout_8h.html#a8d23b2f24705f230a4c6a332a1526f08">   74</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a8d23b2f24705f230a4c6a332a1526f08">luzLow</a> = 0;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="pinout_8h.html#a26ee9c249e71bf8f997be63253c742d2">   75</a></span><span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a26ee9c249e71bf8f997be63253c742d2">hallValue</a> = 0;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a1fd9e169668301624ade2d45e165657a">valueLuz</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a2b45ae943f0573aabd724349bde7d0e8">valuemag</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#ac677e3687f7b320bb632b06e15dd983a">valuetem</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="pinout_8h.html#a06940fe4bef8b09e23436d9439bfe8ce">valuehum</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="pinout_8h.html#a1abf2beb21e104c6909cac04666ff9bd">   82</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#a1abf2beb21e104c6909cac04666ff9bd">readluz</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="pinout_8h.html#a233306ed92ff85db30410973bbec945c">   83</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#a233306ed92ff85db30410973bbec945c">readmag</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="pinout_8h.html#afa7f91709d8e5fdd1d009a9049cb88de">   84</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#afa7f91709d8e5fdd1d009a9049cb88de">readtem</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="pinout_8h.html#ac5edc242222da397cac7005b69d7126b">   85</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#ac5edc242222da397cac7005b69d7126b">readhum</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="pinout_8h.html#a979581f5c18e6336c4233d37c3b974d8">   86</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#a979581f5c18e6336c4233d37c3b974d8">printLTH</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="pinout_8h.html#a1eb723beae8a77171670b6cb5cd14373">   87</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#a1eb723beae8a77171670b6cb5cd14373">printM</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keywordtype">bool</span> <a class="code hl_function" href="pinout_8h.html#a3c533ed6ea8e5da0690fa41c60d28d88">checkAuthorization</a>();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#a19fa8d6ba04ffc9beb801b446715d019">setupMenu</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keywordtype">void</span> <a class="code hl_function" href="pinout_8h.html#acb81d020631e15a522b30f711c37e213">ejecutarMenu</a>();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="pinout_8h.html#a56430d3153d25003b5cc051102ee799d">   94</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#a56430d3153d25003b5cc051102ee799d">TaskIniciarMenu</a>(100, <span class="keyword">false</span>, []() { <a class="code hl_function" href="pinout_8h.html#a19fa8d6ba04ffc9beb801b446715d019">setupMenu</a>(); });</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="pinout_8h.html#a94e8bc7e7a83743deca7047154954b24">   95</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#a94e8bc7e7a83743deca7047154954b24">TaskEjecutarMenu</a>(100, <span class="keyword">false</span>, []() { <a class="code hl_function" href="pinout_8h.html#acb81d020631e15a522b30f711c37e213">ejecutarMenu</a>(); });</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="pinout_8h.html#acd1b36fc0fc32e926b69aa803e2cf23f">   97</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#acd1b36fc0fc32e926b69aa803e2cf23f">TaskLuz</a>(100, <span class="keyword">true</span>, <a class="code hl_function" href="pinout_8h.html#a1abf2beb21e104c6909cac04666ff9bd">readluz</a>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="pinout_8h.html#a1cf3a398b254c33f9859772b018bf9d6">   98</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#a1cf3a398b254c33f9859772b018bf9d6">TaskTem</a>(250, <span class="keyword">true</span>, <a class="code hl_function" href="pinout_8h.html#afa7f91709d8e5fdd1d009a9049cb88de">readtem</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="pinout_8h.html#a30f4619c0128c7a5065f14dbeb48f2ef">   99</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#a30f4619c0128c7a5065f14dbeb48f2ef">TaskHum</a>(220, <span class="keyword">true</span>, <a class="code hl_function" href="pinout_8h.html#ac5edc242222da397cac7005b69d7126b">readhum</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="pinout_8h.html#aa959fbaa2383ef5714eea39f1f42ec1f">  100</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#aa959fbaa2383ef5714eea39f1f42ec1f">TaskMonitoreoAmbiental</a>(500, <span class="keyword">true</span>, <a class="code hl_function" href="pinout_8h.html#a979581f5c18e6336c4233d37c3b974d8">printLTH</a>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="pinout_8h.html#ab3b8ced194d9d4106635feaa5e46e77f">  102</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#ab3b8ced194d9d4106635feaa5e46e77f">TaskMag</a>(150, <span class="keyword">true</span>, <a class="code hl_function" href="pinout_8h.html#a233306ed92ff85db30410973bbec945c">readmag</a>);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="pinout_8h.html#ada7a4c3cdf149f55d6bcb6daa05daa3d">  103</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#ada7a4c3cdf149f55d6bcb6daa05daa3d">TaskMonitorEventos</a>(500, <span class="keyword">true</span>, <a class="code hl_function" href="pinout_8h.html#a1eb723beae8a77171670b6cb5cd14373">printM</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="pinout_8h.html#a9ec2a9382041742d7353eddfe4d6131d">  105</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#a9ec2a9382041742d7353eddfe4d6131d">TaskSecurity</a>(100, <span class="keyword">false</span>, []() { <a class="code hl_function" href="pinout_8h.html#a3c533ed6ea8e5da0690fa41c60d28d88">checkAuthorization</a>(); });</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="pinout_8h.html#ac0ee812d6567d8d6a72980f433978faa">  106</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#ac0ee812d6567d8d6a72980f433978faa">TaskTimeOut3</a>(3000, <span class="keyword">false</span>, []() { <a class="code hl_variable" href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">input</a> = <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1bf4edb1863a9cf81e36160030da5c1e">Input::TimeOut3</a>; });</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="pinout_8h.html#ae11d3372d2b9446c25d99637f2b29e1d">  107</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#ae11d3372d2b9446c25d99637f2b29e1d">TaskTimeOut4</a>(4000, <span class="keyword">false</span>, []() { <a class="code hl_variable" href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">input</a> = <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1f9b152c5df762a63878d95e6e99e22f">Input::TimeOut4</a>; });</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="pinout_8h.html#a5860828fa93b644aa5db614bf2d17993">  108</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#a5860828fa93b644aa5db614bf2d17993">TaskTimeOut7</a>(7000, <span class="keyword">false</span>, []() { <a class="code hl_variable" href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">input</a> = <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a56aa6df5b5540ad526f94904afd98543">Input::TimeOut7</a>; });</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="pinout_8h.html#afccd5c6fc493dd18250f1d019f40a129">  109</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#afccd5c6fc493dd18250f1d019f40a129">TaskTimeOut10</a>(10000, <span class="keyword">false</span>, []() { <a class="code hl_variable" href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">input</a> = <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090a04af7b4a5123b070df238e2674f1a23e">Input::TimeOut10</a>; });</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="pinout_8h.html#a8bdd7c8589dd241edd9cbf87507c61e1">  110</a></span>AsyncTask <a class="code hl_function" href="pinout_8h.html#a8bdd7c8589dd241edd9cbf87507c61e1">TaskBoton</a>(100, <span class="keyword">false</span>, []() { <a class="code hl_variable" href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">input</a> = <a class="code hl_enumvalue" href="pinout_8h.html#a080a822f0093973313bd644e517a5090ab9d75b8eaa112ea48f21325386889776">Input::Boton</a>; });</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#endif </span><span class="comment">//PINOUT_H</span></div>
+<div class="ttc" id="a_state_machine_lib_8h_html"><div class="ttname"><a href="_state_machine_lib_8h.html">StateMachineLib.h</a></div></div>
+<div class="ttc" id="aclass_state_machine_html"><div class="ttname"><a href="class_state_machine.html">StateMachine</a></div><div class="ttdef"><b>Definition</b> StateMachineLib.h:11</div></div>
+<div class="ttc" id="apinout_8h_html_a06940fe4bef8b09e23436d9439bfe8ce"><div class="ttname"><a href="pinout_8h.html#a06940fe4bef8b09e23436d9439bfe8ce">valuehum</a></div><div class="ttdeci">int valuehum</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090">Input</a></div><div class="ttdeci">Input</div><div class="ttdef"><b>Definition</b> pinout.h:56</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090a04af7b4a5123b070df238e2674f1a23e"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090a04af7b4a5123b070df238e2674f1a23e">TimeOut10</a></div><div class="ttdeci">@ TimeOut10</div><div class="ttdef"><b>Definition</b> pinout.h:60</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090a1bf4edb1863a9cf81e36160030da5c1e"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1bf4edb1863a9cf81e36160030da5c1e">TimeOut3</a></div><div class="ttdeci">@ TimeOut3</div><div class="ttdef"><b>Definition</b> pinout.h:57</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090a1f9b152c5df762a63878d95e6e99e22f"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090a1f9b152c5df762a63878d95e6e99e22f">TimeOut4</a></div><div class="ttdeci">@ TimeOut4</div><div class="ttdef"><b>Definition</b> pinout.h:58</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090a4e02c8ebeb341c896d4abe491773f0b4"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090a4e02c8ebeb341c896d4abe491773f0b4">SistemaBloqueado</a></div><div class="ttdeci">@ SistemaBloqueado</div><div class="ttdef"><b>Definition</b> pinout.h:63</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090a4e81c184ac3ad48a389cd4454c4a05bb">Unknown</a></div><div class="ttdeci">@ Unknown</div><div class="ttdef"><b>Definition</b> pinout.h:66</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090a56aa6df5b5540ad526f94904afd98543"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090a56aa6df5b5540ad526f94904afd98543">TimeOut7</a></div><div class="ttdeci">@ TimeOut7</div><div class="ttdef"><b>Definition</b> pinout.h:59</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090a726c04f09eb02920d21155592c46fc3d"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090a726c04f09eb02920d21155592c46fc3d">ClaveCorrecta</a></div><div class="ttdeci">@ ClaveCorrecta</div><div class="ttdef"><b>Definition</b> pinout.h:61</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090aac18d6e8370858cab2c3dc6623207a3c"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090aac18d6e8370858cab2c3dc6623207a3c">Hall</a></div><div class="ttdeci">@ Hall</div><div class="ttdef"><b>Definition</b> pinout.h:65</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090ab9d75b8eaa112ea48f21325386889776"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090ab9d75b8eaa112ea48f21325386889776">Boton</a></div><div class="ttdeci">@ Boton</div><div class="ttdef"><b>Definition</b> pinout.h:62</div></div>
+<div class="ttc" id="apinout_8h_html_a080a822f0093973313bd644e517a5090af2fc8b59d622b78190126e678ef7a4f9"><div class="ttname"><a href="pinout_8h.html#a080a822f0093973313bd644e517a5090af2fc8b59d622b78190126e678ef7a4f9">TempLuz</a></div><div class="ttdeci">@ TempLuz</div><div class="ttdef"><b>Definition</b> pinout.h:64</div></div>
+<div class="ttc" id="apinout_8h_html_a0e6c3cc7e8c762ab0ca1fa2296d7bbfe"><div class="ttname"><a href="pinout_8h.html#a0e6c3cc7e8c762ab0ca1fa2296d7bbfe">keypad</a></div><div class="ttdeci">Keypad keypad</div><div class="ttdef"><b>Definition</b> pinout.h:35</div></div>
+<div class="ttc" id="apinout_8h_html_a19fa8d6ba04ffc9beb801b446715d019"><div class="ttname"><a href="pinout_8h.html#a19fa8d6ba04ffc9beb801b446715d019">setupMenu</a></div><div class="ttdeci">void setupMenu()</div><div class="ttdef"><b>Definition</b> Buzzer.h:50</div></div>
+<div class="ttc" id="apinout_8h_html_a1abf2beb21e104c6909cac04666ff9bd"><div class="ttname"><a href="pinout_8h.html#a1abf2beb21e104c6909cac04666ff9bd">readluz</a></div><div class="ttdeci">void readluz(void)</div></div>
+<div class="ttc" id="apinout_8h_html_a1cf3a398b254c33f9859772b018bf9d6"><div class="ttname"><a href="pinout_8h.html#a1cf3a398b254c33f9859772b018bf9d6">TaskTem</a></div><div class="ttdeci">AsyncTask TaskTem(250, true, readtem)</div></div>
+<div class="ttc" id="apinout_8h_html_a1eb723beae8a77171670b6cb5cd14373"><div class="ttname"><a href="pinout_8h.html#a1eb723beae8a77171670b6cb5cd14373">printM</a></div><div class="ttdeci">void printM(void)</div></div>
+<div class="ttc" id="apinout_8h_html_a1fd9e169668301624ade2d45e165657a"><div class="ttname"><a href="pinout_8h.html#a1fd9e169668301624ade2d45e165657a">valueLuz</a></div><div class="ttdeci">int valueLuz</div></div>
+<div class="ttc" id="apinout_8h_html_a233306ed92ff85db30410973bbec945c"><div class="ttname"><a href="pinout_8h.html#a233306ed92ff85db30410973bbec945c">readmag</a></div><div class="ttdeci">void readmag(void)</div></div>
+<div class="ttc" id="apinout_8h_html_a26ee9c249e71bf8f997be63253c742d2"><div class="ttname"><a href="pinout_8h.html#a26ee9c249e71bf8f997be63253c742d2">hallValue</a></div><div class="ttdeci">int hallValue</div><div class="ttdef"><b>Definition</b> pinout.h:75</div></div>
+<div class="ttc" id="apinout_8h_html_a2b45ae943f0573aabd724349bde7d0e8"><div class="ttname"><a href="pinout_8h.html#a2b45ae943f0573aabd724349bde7d0e8">valuemag</a></div><div class="ttdeci">int valuemag</div></div>
+<div class="ttc" id="apinout_8h_html_a2b9930ebaec8233f157d5cbcc193b350"><div class="ttname"><a href="pinout_8h.html#a2b9930ebaec8233f157d5cbcc193b350">luzHigh</a></div><div class="ttdeci">int luzHigh</div><div class="ttdef"><b>Definition</b> pinout.h:73</div></div>
+<div class="ttc" id="apinout_8h_html_a30f4619c0128c7a5065f14dbeb48f2ef"><div class="ttname"><a href="pinout_8h.html#a30f4619c0128c7a5065f14dbeb48f2ef">TaskHum</a></div><div class="ttdeci">AsyncTask TaskHum(220, true, readhum)</div></div>
+<div class="ttc" id="apinout_8h_html_a3c533ed6ea8e5da0690fa41c60d28d88"><div class="ttname"><a href="pinout_8h.html#a3c533ed6ea8e5da0690fa41c60d28d88">checkAuthorization</a></div><div class="ttdeci">bool checkAuthorization()</div><div class="ttdef"><b>Definition</b> Seguridad.h:10</div></div>
+<div class="ttc" id="apinout_8h_html_a3cfd3aa62338d12609f6d65bce97e9cd"><div class="ttname"><a href="pinout_8h.html#a3cfd3aa62338d12609f6d65bce97e9cd">ROWS</a></div><div class="ttdeci">#define ROWS</div><div class="ttdef"><b>Definition</b> pinout.h:24</div></div>
+<div class="ttc" id="apinout_8h_html_a4d2ec6fd3a1844c88c33f1521df53a1d"><div class="ttname"><a href="pinout_8h.html#a4d2ec6fd3a1844c88c33f1521df53a1d">stateMachine</a></div><div class="ttdeci">StateMachine stateMachine(6, 12)</div></div>
+<div class="ttc" id="apinout_8h_html_a56430d3153d25003b5cc051102ee799d"><div class="ttname"><a href="pinout_8h.html#a56430d3153d25003b5cc051102ee799d">TaskIniciarMenu</a></div><div class="ttdeci">AsyncTask TaskIniciarMenu(100, false, []() { setupMenu();})</div></div>
+<div class="ttc" id="apinout_8h_html_a5860828fa93b644aa5db614bf2d17993"><div class="ttname"><a href="pinout_8h.html#a5860828fa93b644aa5db614bf2d17993">TaskTimeOut7</a></div><div class="ttdeci">AsyncTask TaskTimeOut7(7000, false, []() { input=Input::TimeOut7;})</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition</b> pinout.h:45</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8a14e18a561f7c7198dc3e628a5ace726b"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a14e18a561f7c7198dc3e628a5ace726b">Bloqueado</a></div><div class="ttdeci">@ Bloqueado</div><div class="ttdef"><b>Definition</b> pinout.h:51</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8a2f1ac349ec79332af9a94c3cd43c6921"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a2f1ac349ec79332af9a94c3cd43c6921">MonitoreoAmbiental</a></div><div class="ttdeci">@ MonitoreoAmbiental</div><div class="ttdef"><b>Definition</b> pinout.h:48</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8a5853b2d9804fc5a6d3d1948c978c6dcb"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a5853b2d9804fc5a6d3d1948c978c6dcb">Alarma</a></div><div class="ttdeci">@ Alarma</div><div class="ttdef"><b>Definition</b> pinout.h:50</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8a5c9e6911f4248ff02074469a6b247156"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a5c9e6911f4248ff02074469a6b247156">Config</a></div><div class="ttdeci">@ Config</div><div class="ttdef"><b>Definition</b> pinout.h:47</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8a7429777ed105978c319dd77880e3854a"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8a7429777ed105978c319dd77880e3854a">Inicio</a></div><div class="ttdeci">@ Inicio</div><div class="ttdef"><b>Definition</b> pinout.h:46</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8aac40392c8d00cac86ac30c30dbbc28ae"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8aac40392c8d00cac86ac30c30dbbc28ae">MonitorEventos</a></div><div class="ttdeci">@ MonitorEventos</div><div class="ttdef"><b>Definition</b> pinout.h:49</div></div>
+<div class="ttc" id="apinout_8h_html_a6a1e4720fd7bbd1f81bebf1b3de0efec"><div class="ttname"><a href="pinout_8h.html#a6a1e4720fd7bbd1f81bebf1b3de0efec">tempHigh</a></div><div class="ttdeci">int tempHigh</div><div class="ttdef"><b>Definition</b> pinout.h:71</div></div>
+<div class="ttc" id="apinout_8h_html_a6d6753e0ae098b31e2f84d4024e361cf"><div class="ttname"><a href="pinout_8h.html#a6d6753e0ae098b31e2f84d4024e361cf">rowPins</a></div><div class="ttdeci">byte rowPins[ROWS]</div><div class="ttdef"><b>Definition</b> pinout.h:32</div></div>
+<div class="ttc" id="apinout_8h_html_a856e873a1d14012d57ddb813c4a1e40a"><div class="ttname"><a href="pinout_8h.html#a856e873a1d14012d57ddb813c4a1e40a">keys</a></div><div class="ttdeci">char keys[ROWS][COLS]</div><div class="ttdef"><b>Definition</b> pinout.h:26</div></div>
+<div class="ttc" id="apinout_8h_html_a8bdd7c8589dd241edd9cbf87507c61e1"><div class="ttname"><a href="pinout_8h.html#a8bdd7c8589dd241edd9cbf87507c61e1">TaskBoton</a></div><div class="ttdeci">AsyncTask TaskBoton(100, false, []() { input=Input::Boton;})</div></div>
+<div class="ttc" id="apinout_8h_html_a8d23b2f24705f230a4c6a332a1526f08"><div class="ttname"><a href="pinout_8h.html#a8d23b2f24705f230a4c6a332a1526f08">luzLow</a></div><div class="ttdeci">int luzLow</div><div class="ttdef"><b>Definition</b> pinout.h:74</div></div>
+<div class="ttc" id="apinout_8h_html_a94903018690fcd7ea22fe857aee17107"><div class="ttname"><a href="pinout_8h.html#a94903018690fcd7ea22fe857aee17107">tempLow</a></div><div class="ttdeci">int tempLow</div><div class="ttdef"><b>Definition</b> pinout.h:72</div></div>
+<div class="ttc" id="apinout_8h_html_a94e8bc7e7a83743deca7047154954b24"><div class="ttname"><a href="pinout_8h.html#a94e8bc7e7a83743deca7047154954b24">TaskEjecutarMenu</a></div><div class="ttdeci">AsyncTask TaskEjecutarMenu(100, false, []() { ejecutarMenu();})</div></div>
+<div class="ttc" id="apinout_8h_html_a979581f5c18e6336c4233d37c3b974d8"><div class="ttname"><a href="pinout_8h.html#a979581f5c18e6336c4233d37c3b974d8">printLTH</a></div><div class="ttdeci">void printLTH(void)</div></div>
+<div class="ttc" id="apinout_8h_html_a9ec2a9382041742d7353eddfe4d6131d"><div class="ttname"><a href="pinout_8h.html#a9ec2a9382041742d7353eddfe4d6131d">TaskSecurity</a></div><div class="ttdeci">AsyncTask TaskSecurity(100, false, []() { checkAuthorization();})</div></div>
+<div class="ttc" id="apinout_8h_html_aa959fbaa2383ef5714eea39f1f42ec1f"><div class="ttname"><a href="pinout_8h.html#aa959fbaa2383ef5714eea39f1f42ec1f">TaskMonitoreoAmbiental</a></div><div class="ttdeci">AsyncTask TaskMonitoreoAmbiental(500, true, printLTH)</div></div>
+<div class="ttc" id="apinout_8h_html_aa9fece7b062124080e4b2976f9a8b675"><div class="ttname"><a href="pinout_8h.html#aa9fece7b062124080e4b2976f9a8b675">colPins</a></div><div class="ttdeci">byte colPins[COLS]</div><div class="ttdef"><b>Definition</b> pinout.h:33</div></div>
+<div class="ttc" id="apinout_8h_html_ab3b8ced194d9d4106635feaa5e46e77f"><div class="ttname"><a href="pinout_8h.html#ab3b8ced194d9d4106635feaa5e46e77f">TaskMag</a></div><div class="ttdeci">AsyncTask TaskMag(150, true, readmag)</div></div>
+<div class="ttc" id="apinout_8h_html_ab59ad2ee1a48b83c2eef1f019ed8cc48"><div class="ttname"><a href="pinout_8h.html#ab59ad2ee1a48b83c2eef1f019ed8cc48">COLS</a></div><div class="ttdeci">#define COLS</div><div class="ttdef"><b>Definition</b> pinout.h:25</div></div>
+<div class="ttc" id="apinout_8h_html_ac0ee812d6567d8d6a72980f433978faa"><div class="ttname"><a href="pinout_8h.html#ac0ee812d6567d8d6a72980f433978faa">TaskTimeOut3</a></div><div class="ttdeci">AsyncTask TaskTimeOut3(3000, false, []() { input=Input::TimeOut3;})</div></div>
+<div class="ttc" id="apinout_8h_html_ac5edc242222da397cac7005b69d7126b"><div class="ttname"><a href="pinout_8h.html#ac5edc242222da397cac7005b69d7126b">readhum</a></div><div class="ttdeci">void readhum(void)</div></div>
+<div class="ttc" id="apinout_8h_html_ac677e3687f7b320bb632b06e15dd983a"><div class="ttname"><a href="pinout_8h.html#ac677e3687f7b320bb632b06e15dd983a">valuetem</a></div><div class="ttdeci">int valuetem</div></div>
+<div class="ttc" id="apinout_8h_html_acb81d020631e15a522b30f711c37e213"><div class="ttname"><a href="pinout_8h.html#acb81d020631e15a522b30f711c37e213">ejecutarMenu</a></div><div class="ttdeci">void ejecutarMenu()</div><div class="ttdef"><b>Definition</b> Buzzer.h:76</div></div>
+<div class="ttc" id="apinout_8h_html_acd1b36fc0fc32e926b69aa803e2cf23f"><div class="ttname"><a href="pinout_8h.html#acd1b36fc0fc32e926b69aa803e2cf23f">TaskLuz</a></div><div class="ttdeci">AsyncTask TaskLuz(100, true, readluz)</div></div>
+<div class="ttc" id="apinout_8h_html_ad4db59ccea8946af2bb70f8269e99eeb"><div class="ttname"><a href="pinout_8h.html#ad4db59ccea8946af2bb70f8269e99eeb">input</a></div><div class="ttdeci">Input input</div><div class="ttdef"><b>Definition</b> pinout.h:69</div></div>
+<div class="ttc" id="apinout_8h_html_ada7a4c3cdf149f55d6bcb6daa05daa3d"><div class="ttname"><a href="pinout_8h.html#ada7a4c3cdf149f55d6bcb6daa05daa3d">TaskMonitorEventos</a></div><div class="ttdeci">AsyncTask TaskMonitorEventos(500, true, printM)</div></div>
+<div class="ttc" id="apinout_8h_html_ae11d3372d2b9446c25d99637f2b29e1d"><div class="ttname"><a href="pinout_8h.html#ae11d3372d2b9446c25d99637f2b29e1d">TaskTimeOut4</a></div><div class="ttdeci">AsyncTask TaskTimeOut4(4000, false, []() { input=Input::TimeOut4;})</div></div>
+<div class="ttc" id="apinout_8h_html_af97afdf00af0e116e9b5957f6a470fc2"><div class="ttname"><a href="pinout_8h.html#af97afdf00af0e116e9b5957f6a470fc2">lcd</a></div><div class="ttdeci">LiquidCrystal lcd(12, 11, 5, 4, 3, 2)</div></div>
+<div class="ttc" id="apinout_8h_html_afa7f91709d8e5fdd1d009a9049cb88de"><div class="ttname"><a href="pinout_8h.html#afa7f91709d8e5fdd1d009a9049cb88de">readtem</a></div><div class="ttdeci">void readtem(void)</div></div>
+<div class="ttc" id="apinout_8h_html_afccd5c6fc493dd18250f1d019f40a129"><div class="ttname"><a href="pinout_8h.html#afccd5c6fc493dd18250f1d019f40a129">TaskTimeOut10</a></div><div class="ttdeci">AsyncTask TaskTimeOut10(10000, false, []() { input=Input::TimeOut10;})</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

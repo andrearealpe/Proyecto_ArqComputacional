@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Arquitectura: Archivo de código fuente C:/Users/earea/OneDrive/Escritorio/arquiFinal/StateMachineLib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Arquitectura<span id="projectnumber">&#160;1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_8dd111f6e078504c38571839992d2956.html">arquiFinal</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">StateMachineLib.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_state_machine_lib_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _StateMachineLib_h</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _StateMachineLib_h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#if defined(ARDUINO) &amp;&amp; ARDUINO &gt;= 100</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">    #include &quot;Arduino.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">    #include &quot;WProgram.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_state_machine.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="class_state_machine.html">StateMachine</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_state_machine.html#a899fd917a478ef398252055a25a09726">   12</a></span>    <span class="keyword">typedef</span> bool(*<a class="code hl_typedef" href="class_state_machine.html#a899fd917a478ef398252055a25a09726">StateMachineCondition</a>)();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">   13</a></span>    <span class="keyword">typedef</span> void(*<a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a>)();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_state.html">   15</a></span>    <span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_state.html#a00ce3425404160fb6288a20e83fef4a4">   16</a></span>        <a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> <a class="code hl_variable" href="struct_state_machine_1_1_state.html#a00ce3425404160fb6288a20e83fef4a4">OnEntering</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_state.html#ab89cd5346cb3a987a2960f9ed8ca5b88">   17</a></span>        <a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> <a class="code hl_variable" href="struct_state_machine_1_1_state.html#ab89cd5346cb3a987a2960f9ed8ca5b88">OnLeaving</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    } <a class="code hl_enumeration" href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a>;</div>
+</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_transition.html">   20</a></span>    <span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_transition.html#af0d9648490dc0eebfa88273ac04ba1f6">   21</a></span>        uint8_t <a class="code hl_variable" href="struct_state_machine_1_1_transition.html#af0d9648490dc0eebfa88273ac04ba1f6">InputState</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_transition.html#ad700ede8e618e0d8aa85833ec32a8fc6">   22</a></span>        uint8_t <a class="code hl_variable" href="struct_state_machine_1_1_transition.html#ad700ede8e618e0d8aa85833ec32a8fc6">OutputState</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_transition.html#aa9a2f603fd786de1b69b59aa8f659efb">   24</a></span>        <a class="code hl_typedef" href="class_state_machine.html#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> <a class="code hl_variable" href="struct_state_machine_1_1_transition.html#aa9a2f603fd786de1b69b59aa8f659efb">Condition</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_state_machine_1_1_transition.html#ab075a399df3861173acf55ec24632c92">   25</a></span>        <a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> <a class="code hl_variable" href="struct_state_machine_1_1_transition.html#ab075a399df3861173acf55ec24632c92">Action</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    } <a class="code hl_struct" href="struct_state_machine_1_1_transition.html">Transition</a>;</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_function" href="class_state_machine.html#a1c184149ecd646c1ec9da6cd81c35c6d">StateMachine</a>(uint8_t numStates, uint8_t numTransitions);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    uint8_t <a class="code hl_function" href="class_state_machine.html#ae71bdc3ddeefe3826508f0846cb843d3">AddTransition</a>(uint8_t inputState, uint8_t outputState, <a class="code hl_typedef" href="class_state_machine.html#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    uint8_t <a class="code hl_function" href="class_state_machine.html#ae71bdc3ddeefe3826508f0846cb843d3">AddTransition</a>(uint8_t inputState, uint8_t outputState, <a class="code hl_typedef" href="class_state_machine.html#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition, <a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#a615a72a631a781dd9ba740df4d343b88">SetTransition</a>(uint8_t transition, uint8_t inputState, uint8_t outputState, <a class="code hl_typedef" href="class_state_machine.html#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#a615a72a631a781dd9ba740df4d343b88">SetTransition</a>(uint8_t transition, uint8_t inputState, uint8_t outputState, <a class="code hl_typedef" href="class_state_machine.html#a899fd917a478ef398252055a25a09726">StateMachineCondition</a> condition, <a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#a4b16cf11156e9601cc35238d7879ccaf">RemoveTransition</a>(uint8_t transition);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#a282810c1f7b0d9a7320a8bc71b1ceba5">SetOnEntering</a>(uint8_t state, <a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#aa30b53f362b55b468567b7be6b7bccb3">SetOnLeaving</a>(uint8_t state, <a class="code hl_typedef" href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachineAction</a> action);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#a1f032426c54da0f490ab2a29f2e89e43">ClearOnEntering</a>(uint8_t state);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#a87645fbade2f0c8b161604e155b362c0">ClearOnLeaving</a>(uint8_t state);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#aecb4ecf2ee63abd61e306f0e371b7d35">SetState</a>(uint8_t state, <span class="keywordtype">bool</span> launchLeaving, <span class="keywordtype">bool</span> launchEntering);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    uint8_t <a class="code hl_function" href="class_state_machine.html#a9b5b0c288ea2583867221607280b2605">GetState</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_state_machine.html#ad3d40e86a64ce99a46b68037f2f6a454">Update</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_state_machine.html#a0e7ebe6e2ba00c6e2a7230c7ca4c3173">   48</a></span>    <a class="code hl_struct" href="struct_state_machine_1_1_state.html">State</a>* <a class="code hl_variable" href="class_state_machine.html#a0e7ebe6e2ba00c6e2a7230c7ca4c3173">_states</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_state_machine.html#ad96f754e4a81ce3565d2f38501f82f33">   49</a></span>    uint8_t <a class="code hl_variable" href="class_state_machine.html#ad96f754e4a81ce3565d2f38501f82f33">_numStates</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_state_machine.html#a991bca0c6d776b17b0433ba8e2069a34">   50</a></span>    uint8_t <a class="code hl_variable" href="class_state_machine.html#a991bca0c6d776b17b0433ba8e2069a34">_currentStateIndex</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_state_machine.html#abcb1251bcd3b366315e3be752acc46a7">   52</a></span>    <a class="code hl_struct" href="struct_state_machine_1_1_transition.html">Transition</a>* <a class="code hl_variable" href="class_state_machine.html#abcb1251bcd3b366315e3be752acc46a7">_transitions</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_state_machine.html#a7a8476858f22250c291e090c201294c9">   53</a></span>    uint8_t <a class="code hl_variable" href="class_state_machine.html#a7a8476858f22250c291e090c201294c9">_numTransitions</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_state_machine.html#acf447971ca25cd3773027aa1ff419942">   54</a></span>    uint8_t <a class="code hl_variable" href="class_state_machine.html#acf447971ca25cd3773027aa1ff419942">_currentTransitionIndex</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_state_machine.html#a2dea417ce59bd3ba665e10360793a9d1">initVariables</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="ttc" id="aclass_state_machine_html"><div class="ttname"><a href="class_state_machine.html">StateMachine</a></div><div class="ttdef"><b>Definition</b> StateMachineLib.h:11</div></div>
+<div class="ttc" id="aclass_state_machine_html_a0e7ebe6e2ba00c6e2a7230c7ca4c3173"><div class="ttname"><a href="class_state_machine.html#a0e7ebe6e2ba00c6e2a7230c7ca4c3173">StateMachine::_states</a></div><div class="ttdeci">State * _states</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:48</div></div>
+<div class="ttc" id="aclass_state_machine_html_a1c184149ecd646c1ec9da6cd81c35c6d"><div class="ttname"><a href="class_state_machine.html#a1c184149ecd646c1ec9da6cd81c35c6d">StateMachine::StateMachine</a></div><div class="ttdeci">StateMachine(uint8_t numStates, uint8_t numTransitions)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:3</div></div>
+<div class="ttc" id="aclass_state_machine_html_a1f032426c54da0f490ab2a29f2e89e43"><div class="ttname"><a href="class_state_machine.html#a1f032426c54da0f490ab2a29f2e89e43">StateMachine::ClearOnEntering</a></div><div class="ttdeci">void ClearOnEntering(uint8_t state)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:56</div></div>
+<div class="ttc" id="aclass_state_machine_html_a282810c1f7b0d9a7320a8bc71b1ceba5"><div class="ttname"><a href="class_state_machine.html#a282810c1f7b0d9a7320a8bc71b1ceba5">StateMachine::SetOnEntering</a></div><div class="ttdeci">void SetOnEntering(uint8_t state, StateMachineAction action)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:46</div></div>
+<div class="ttc" id="aclass_state_machine_html_a2dea417ce59bd3ba665e10360793a9d1"><div class="ttname"><a href="class_state_machine.html#a2dea417ce59bd3ba665e10360793a9d1">StateMachine::initVariables</a></div><div class="ttdeci">void initVariables()</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:95</div></div>
+<div class="ttc" id="aclass_state_machine_html_a4b16cf11156e9601cc35238d7879ccaf"><div class="ttname"><a href="class_state_machine.html#a4b16cf11156e9601cc35238d7879ccaf">StateMachine::RemoveTransition</a></div><div class="ttdeci">void RemoveTransition(uint8_t transition)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:41</div></div>
+<div class="ttc" id="aclass_state_machine_html_a615a72a631a781dd9ba740df4d343b88"><div class="ttname"><a href="class_state_machine.html#a615a72a631a781dd9ba740df4d343b88">StateMachine::SetTransition</a></div><div class="ttdeci">void SetTransition(uint8_t transition, uint8_t inputState, uint8_t outputState, StateMachineCondition condition)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:28</div></div>
+<div class="ttc" id="aclass_state_machine_html_a7a8476858f22250c291e090c201294c9"><div class="ttname"><a href="class_state_machine.html#a7a8476858f22250c291e090c201294c9">StateMachine::_numTransitions</a></div><div class="ttdeci">uint8_t _numTransitions</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:53</div></div>
+<div class="ttc" id="aclass_state_machine_html_a87645fbade2f0c8b161604e155b362c0"><div class="ttname"><a href="class_state_machine.html#a87645fbade2f0c8b161604e155b362c0">StateMachine::ClearOnLeaving</a></div><div class="ttdeci">void ClearOnLeaving(uint8_t state)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:61</div></div>
+<div class="ttc" id="aclass_state_machine_html_a899fd917a478ef398252055a25a09726"><div class="ttname"><a href="class_state_machine.html#a899fd917a478ef398252055a25a09726">StateMachine::StateMachineCondition</a></div><div class="ttdeci">bool(* StateMachineCondition)()</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:12</div></div>
+<div class="ttc" id="aclass_state_machine_html_a991bca0c6d776b17b0433ba8e2069a34"><div class="ttname"><a href="class_state_machine.html#a991bca0c6d776b17b0433ba8e2069a34">StateMachine::_currentStateIndex</a></div><div class="ttdeci">uint8_t _currentStateIndex</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:50</div></div>
+<div class="ttc" id="aclass_state_machine_html_a9b5b0c288ea2583867221607280b2605"><div class="ttname"><a href="class_state_machine.html#a9b5b0c288ea2583867221607280b2605">StateMachine::GetState</a></div><div class="ttdeci">uint8_t GetState() const</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:74</div></div>
+<div class="ttc" id="aclass_state_machine_html_aa30b53f362b55b468567b7be6b7bccb3"><div class="ttname"><a href="class_state_machine.html#aa30b53f362b55b468567b7be6b7bccb3">StateMachine::SetOnLeaving</a></div><div class="ttdeci">void SetOnLeaving(uint8_t state, StateMachineAction action)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:51</div></div>
+<div class="ttc" id="aclass_state_machine_html_aae648388088bdec736a04df5046e52ac"><div class="ttname"><a href="class_state_machine.html#aae648388088bdec736a04df5046e52ac">StateMachine::StateMachineAction</a></div><div class="ttdeci">void(* StateMachineAction)()</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:13</div></div>
+<div class="ttc" id="aclass_state_machine_html_abcb1251bcd3b366315e3be752acc46a7"><div class="ttname"><a href="class_state_machine.html#abcb1251bcd3b366315e3be752acc46a7">StateMachine::_transitions</a></div><div class="ttdeci">Transition * _transitions</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:52</div></div>
+<div class="ttc" id="aclass_state_machine_html_acf447971ca25cd3773027aa1ff419942"><div class="ttname"><a href="class_state_machine.html#acf447971ca25cd3773027aa1ff419942">StateMachine::_currentTransitionIndex</a></div><div class="ttdeci">uint8_t _currentTransitionIndex</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:54</div></div>
+<div class="ttc" id="aclass_state_machine_html_ad3d40e86a64ce99a46b68037f2f6a454"><div class="ttname"><a href="class_state_machine.html#ad3d40e86a64ce99a46b68037f2f6a454">StateMachine::Update</a></div><div class="ttdeci">bool Update()</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:79</div></div>
+<div class="ttc" id="aclass_state_machine_html_ad96f754e4a81ce3565d2f38501f82f33"><div class="ttname"><a href="class_state_machine.html#ad96f754e4a81ce3565d2f38501f82f33">StateMachine::_numStates</a></div><div class="ttdeci">uint8_t _numStates</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:49</div></div>
+<div class="ttc" id="aclass_state_machine_html_ae71bdc3ddeefe3826508f0846cb843d3"><div class="ttname"><a href="class_state_machine.html#ae71bdc3ddeefe3826508f0846cb843d3">StateMachine::AddTransition</a></div><div class="ttdeci">uint8_t AddTransition(uint8_t inputState, uint8_t outputState, StateMachineCondition condition)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:14</div></div>
+<div class="ttc" id="aclass_state_machine_html_aecb4ecf2ee63abd61e306f0e371b7d35"><div class="ttname"><a href="class_state_machine.html#aecb4ecf2ee63abd61e306f0e371b7d35">StateMachine::SetState</a></div><div class="ttdeci">void SetState(uint8_t state, bool launchLeaving, bool launchEntering)</div><div class="ttdef"><b>Definition</b> StateMachineLib.cpp:66</div></div>
+<div class="ttc" id="apinout_8h_html_a5d74787dedbc4e11c1ab15bf487e61f8"><div class="ttname"><a href="pinout_8h.html#a5d74787dedbc4e11c1ab15bf487e61f8">State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition</b> pinout.h:45</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_state_html"><div class="ttname"><a href="struct_state_machine_1_1_state.html">StateMachine::State</a></div><div class="ttdef"><b>Definition</b> StateMachineLib.h:15</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_state_html_a00ce3425404160fb6288a20e83fef4a4"><div class="ttname"><a href="struct_state_machine_1_1_state.html#a00ce3425404160fb6288a20e83fef4a4">StateMachine::State::OnEntering</a></div><div class="ttdeci">StateMachineAction OnEntering</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:16</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_state_html_ab89cd5346cb3a987a2960f9ed8ca5b88"><div class="ttname"><a href="struct_state_machine_1_1_state.html#ab89cd5346cb3a987a2960f9ed8ca5b88">StateMachine::State::OnLeaving</a></div><div class="ttdeci">StateMachineAction OnLeaving</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:17</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_transition_html"><div class="ttname"><a href="struct_state_machine_1_1_transition.html">StateMachine::Transition</a></div><div class="ttdef"><b>Definition</b> StateMachineLib.h:20</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_transition_html_aa9a2f603fd786de1b69b59aa8f659efb"><div class="ttname"><a href="struct_state_machine_1_1_transition.html#aa9a2f603fd786de1b69b59aa8f659efb">StateMachine::Transition::Condition</a></div><div class="ttdeci">StateMachineCondition Condition</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:24</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_transition_html_ab075a399df3861173acf55ec24632c92"><div class="ttname"><a href="struct_state_machine_1_1_transition.html#ab075a399df3861173acf55ec24632c92">StateMachine::Transition::Action</a></div><div class="ttdeci">StateMachineAction Action</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:25</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_transition_html_ad700ede8e618e0d8aa85833ec32a8fc6"><div class="ttname"><a href="struct_state_machine_1_1_transition.html#ad700ede8e618e0d8aa85833ec32a8fc6">StateMachine::Transition::OutputState</a></div><div class="ttdeci">uint8_t OutputState</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:22</div></div>
+<div class="ttc" id="astruct_state_machine_1_1_transition_html_af0d9648490dc0eebfa88273ac04ba1f6"><div class="ttname"><a href="struct_state_machine_1_1_transition.html#af0d9648490dc0eebfa88273ac04ba1f6">StateMachine::Transition::InputState</a></div><div class="ttdeci">uint8_t InputState</div><div class="ttdef"><b>Definition</b> StateMachineLib.h:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
