@@ -19,7 +19,7 @@
 #define PIN_DHT 10
 #define BOTON 38
 
-#define DHTTYPE DHT22
+#define DHTTYPE DHT11
 
 DHT dht(PIN_DHT, DHTTYPE);
 
@@ -41,7 +41,7 @@ Keypad keypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 LiquidCrystal lcd(12, 11,5, 4, 3, 2);
 
 // Create new StateMachine
-StateMachine stateMachine(6, 12);
+StateMachine stateMachine(6, 13);
 
 // State Alias
 enum State
@@ -121,8 +121,8 @@ AsyncTask TaskBoton(1000, false, []() { input = Input::Boton; });
 AsyncTask TaskTempLuz(100, false, [](){ input = Input::TempLuz; });
 AsyncTask TaskHall(100, false, [](){ input = Input::Hall; });
 AsyncTask TaskLedBLUE(800, false, [](){ digitalWrite(LED_BLUE, HIGH);});
-AsyncTask TaskLedBLUELOW(800, false, [](){ digitalWrite(LED_BLUE, LOW);});
-AsyncTask TaskLedRED(50, true, [](){ digitalWrite(LED_RED, HIGH);});
-AsyncTask TaskLedREDLOW(50, true, [](){ digitalWrite(LED_RED, LOW);});
+AsyncTask TaskLedBLUELOW(800, false, [](){ digitalWrite(LED_BLUE, 0);});
+AsyncTask TaskLedRED(50, false, [](){ digitalWrite(LED_RED, HIGH);});
+AsyncTask TaskLedREDLOW(1000, false, [](){ digitalWrite(LED_RED, 0);});
 
 #endif //PINOUT_H

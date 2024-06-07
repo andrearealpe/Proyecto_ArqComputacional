@@ -2,6 +2,7 @@
 
 void printLTH (void){
   lcd.clear();
+  tempLuzMayor();
 
   lcd.setCursor(0, 1);
   lcd.print("Luz:");
@@ -15,16 +16,17 @@ void printLTH (void){
   lcd.print("Hum:");
   TaskHum.Start();
 
-  tempLuzMayor();
+  //tempLuzMayor();
 };
 
 void printM (void){
+  hallMayor();
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Hall: ");
   TaskMag.Start();
 
-  void hallMayor();
+  hallMayor();
 }
 
 void readluz (void){
@@ -38,12 +40,12 @@ void readmag (void){
   lcd.print(valuemag);//escribe mag
 };
 void readtem (void){
-  valuetem = dht.readHumidity();
+  valuetem = dht.readTemperature();
   lcd.setCursor(5, 0);
   lcd.print(valuetem);//escribe temperatura
 };
 void readhum (void){
-  valuehum = dht.readTemperature();
+  valuehum = dht.readHumidity();
   lcd.setCursor(14, 0);
   lcd.print(valuehum);// escribe humedad
 };

@@ -19,35 +19,55 @@ LiquidScreen screen3(hall,reset);
 LiquidMenu menu(lcd);
 
 void sensor_up() {
-	int focusedLine = menu.get_focusedLine();
-	if(focusedLine == 0){
-		tempHigh += 5;
-	} else if (focusedLine == 1){
-		tempLow += 5;
-	} else if (focusedLine == 2){
-		luzHigh += 5;
-	} else if (focusedLine == 3){
-		luzLow += 5;
-	} else if (focusedLine == 4){
-		hallValue += 5;
-	}
-	menu.update();
+    LiquidScreen *currentScreen = menu.get_currentScreen();
+
+    if (currentScreen == &screen1) {  // Screen 1 (temp_high, temp_low)
+        int focusedLine = menu.get_focusedLine();
+        if (focusedLine == 0) {
+            tempHigh += 5;
+        } else if (focusedLine == 1) {
+            tempLow += 5;
+        }
+    } else if (currentScreen == &screen2) {  // Screen 2 (luz_high, luz_low)
+        int focusedLine = menu.get_focusedLine();
+        if (focusedLine == 0) {
+            luzHigh += 5;
+        } else if (focusedLine == 1) {
+            luzLow += 5;
+        }
+    } else if (currentScreen == &screen3) {  // Screen 3 (hall, reset)
+        int focusedLine = menu.get_focusedLine();
+        if (focusedLine == 0) {
+            hallValue += 5;
+        }
+    }
+    menu.update();
 }
 
 void sensor_down() {
-	int focusedLine = menu.get_focusedLine();
-	if(focusedLine == 0){
-		tempHigh -= 5;
-	} else if (focusedLine == 1){
-		tempLow -= 5;
-	} else if (focusedLine == 2){
-		luzHigh -= 5;
-	} else if (focusedLine == 3){
-		luzLow -= 5;
-	} else if (focusedLine == 4){
-		hallValue -= 5;
-	}
-	menu.update();
+	LiquidScreen *currentScreen = menu.get_currentScreen();
+
+    if (currentScreen == &screen1) {  // Screen 1 (temp_high, temp_low)
+        int focusedLine = menu.get_focusedLine();
+        if (focusedLine == 0) {
+            tempHigh -= 5;
+        } else if (focusedLine == 1) {
+            tempLow -= 5;
+        }
+    } else if (currentScreen == &screen2) {  // Screen 2 (luz_high, luz_low)
+        int focusedLine = menu.get_focusedLine();
+        if (focusedLine == 0) {
+            luzHigh -= 5;
+        } else if (focusedLine == 1) {
+            luzLow -= 5;
+        }
+    } else if (currentScreen == &screen3) {  // Screen 3 (hall, reset)
+        int focusedLine = menu.get_focusedLine();
+        if (focusedLine == 0) {
+            hallValue -= 5;
+        }
+    }
+    menu.update();
 }
 
 void sensor_reset(){

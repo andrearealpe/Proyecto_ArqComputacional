@@ -54,8 +54,8 @@ void setupStateMachine()
   stateMachine.SetOnLeaving(Config, []() {outputConfig;});
   stateMachine.SetOnLeaving(MonitoreoAmbiental, []() {outputMonitoreoAmbiental;});
   stateMachine.SetOnLeaving(MonitorEventos, []() {outputMonitorEventos;});
-  stateMachine.SetOnLeaving(Alarma, []() {outputAlarma;});
-  stateMachine.SetOnLeaving(Bloqueado, []() {outputBloqueado;});
+  stateMachine.SetOnLeaving(Alarma, []() {outputAlarma; digitalWrite(LED_BLUE, 0);});
+  stateMachine.SetOnLeaving(Bloqueado, []() {outputBloqueado; digitalWrite(LED_RED, 0);});
 
   stateMachine.SetState(Inicio, false, true);
 }
@@ -105,6 +105,7 @@ void inputAlarma()
 void inputBloqueado()
 {
   lcd.clear();
+  lcd.print("Sistema Bloqueado");
   Serial.println("Entered SistemaBloqueado");
   currentMelody = 2;
   TaskLedRED.Start();
@@ -120,6 +121,7 @@ void outputInicio()
 void outputConfig()
 {
   lcd.clear();
+  TaskEjecutarMenu.Stop();
 }
 
 void outputMonitoreoAmbiental()
@@ -143,6 +145,7 @@ void outputAlarma()
 void outputBloqueado()
 {
   lcd.clear();
+  TaskLedRED.Stop();
   TaskLedREDLOW.Start();
 }
 

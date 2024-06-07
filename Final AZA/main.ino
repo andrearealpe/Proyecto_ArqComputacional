@@ -21,7 +21,6 @@ void setup()
 void loop()
 {
   inputBoton();
-  stateMachine.Update();
   TaskLuz.Update();
   TaskTem.Update();
   TaskHum.Update();
@@ -42,6 +41,8 @@ void loop()
   TaskEjecutarBuzzer.Update();
   TaskEjecutarMenu.Update();
   TaskBoton.Update();
+  
+  stateMachine.Update();
 }
 
 
