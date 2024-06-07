@@ -16,9 +16,12 @@
 //Definiciones de los pines
 #define PIN_LUZ A0
 #define PIN_MAG A1
-#define PIN_TEM 22
-#define PIN_HUM 22
+#define PIN_DHT 10
 #define BOTON 38
+
+#define DHTTYPE DHT22
+
+DHT dht(PIN_DHT, DHTTYPE);
 
 //Definición del Keypad
 #define ROWS 4  //four rows

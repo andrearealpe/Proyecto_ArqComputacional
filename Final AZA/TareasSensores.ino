@@ -1,6 +1,7 @@
 #include "pinout.h"
 
 void printLTH (void){
+  lcd.clear();
 
   lcd.setCursor(0, 1);
   lcd.print("Luz:");
@@ -18,6 +19,7 @@ void printLTH (void){
 };
 
 void printM (void){
+  lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Hall: ");
   TaskMag.Start();
@@ -36,12 +38,12 @@ void readmag (void){
   lcd.print(valuemag);//escribe mag
 };
 void readtem (void){
-  valuetem = analogRead(PIN_TEM);
+  valuetem = dht.readHumidity();
   lcd.setCursor(5, 0);
   lcd.print(valuetem);//escribe temperatura
 };
 void readhum (void){
-  valuehum = analogRead(PIN_HUM);
+  valuehum = dht.readTemperature();
   lcd.setCursor(14, 0);
   lcd.print(valuehum);// escribe humedad
 };

@@ -14,15 +14,14 @@ void setup()
   pinMode(LED_RED, OUTPUT);
   pinMode(LED_GREEN, OUTPUT);
   pinMode(LED_BLUE, OUTPUT);
-
+  dht.begin();
   setupStateMachine();
 }
 
 void loop()
 {
-  stateMachine.Update();
-
   inputBoton();
+  stateMachine.Update();
   TaskLuz.Update();
   TaskTem.Update();
   TaskHum.Update();

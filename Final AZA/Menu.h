@@ -1,18 +1,20 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <Servo.h>
 #include "pinout.h"
 #include <LiquidMenu.h>
 
 LiquidScreen screen;
 
-LiquidLine temp_high(0, 1, "TEMP_HIGH ", tempHigh);
+LiquidLine temp_high(0, 0, "TEMP_HIGH ", tempHigh);
 LiquidLine temp_low(0, 1, "TEMP_LOW ", tempLow);
-LiquidLine luz_high(0, 1, "LUZ_HIGH ", luzHigh);
+LiquidScreen screen1(temp_high,temp_low);
+LiquidLine luz_high(0, 0, "LUZ_HIGH ", luzHigh);
 LiquidLine luz_low(0, 1, "LUZ_LOW ", luzLow);
-LiquidLine hall(0, 1, "HALL ", hallValue);
+LiquidScreen screen2(luz_high,luz_low);
+LiquidLine hall(0, 0, "HALL ", hallValue);
 LiquidLine reset(0, 1, "RESET ");
+LiquidScreen screen3(hall,reset);
 
 LiquidMenu menu(lcd);
 
@@ -58,13 +60,7 @@ void sensor_reset(){
 }
 
 void setupMenu() {
-	screen.add_line(temp_high);
-	screen.add_line(temp_low);
-	screen.add_line(luz_high);
-	screen.add_line(luz_low);
-	screen.add_line(hall);
-	screen.add_line(reset);
-
+	lcd.clear();
 	// Function to attach functions to LiquidLine objects.
 	temp_high.attach_function(1, sensor_up);
 	temp_high.attach_function(2, sensor_down);
@@ -79,9 +75,9 @@ void setupMenu() {
 	reset.attach_function(1, sensor_reset);
 	reset.attach_function(2, sensor_reset);
 
-	screen.set_displayLineCount(2);
-
-	menu.add_screen(screen);
+	menu.add_screen(screen1);
+	menu.add_screen(screen2);
+	menu.add_screen(screen3);
 
 	menu.update();
 	TaskEjecutarMenu.Start();
@@ -95,10 +91,17 @@ void ejecutarMenu() {
     Serial.println(key);
 		switch (key){
 			case 'A':
+				Serial.println(F("RIGHT button pressed"));
+				menu.next_screen();
+				break;
+			case 'B':
+				Serial.println(F("LEFT button pressed"));
+				menu.previous_screen();
+			case 'C':
 				Serial.println(F("UP button pressed"));
 				menu.call_function(1);
 				break;
-			case 'B':
+			case 'D':
 				Serial.println(F("DOWN button pressed"));
 				menu.call_function(2);
 				break;

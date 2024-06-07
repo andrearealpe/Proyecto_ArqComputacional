@@ -107,7 +107,7 @@ int melodiaBLoqueado[] = {		// array con las notas de la melodia
 
 int duracionesSirena[] = {		// array con la duracion de cada nota
   //Sirena
-  4, 4, 4, 4, 4, 4, 4, 4
+  4, 4, 4, 4, 4, 4//, 4, 4
 };
 
 int duracionesBloqueado[] = {		// array con la duracion de cada nota

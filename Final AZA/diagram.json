@@ -58,13 +58,13 @@
     [ "ldr1:AO", "mega:A0", "cyan", [ "h220.8", "v47.3" ] ],
     [ "dht1:VCC", "bb1:bp.33", "red", [ "v0" ] ],
     [ "dht1:GND", "bb1:bn.31", "black", [ "v0" ] ],
-    [ "dht1:SDA", "mega:10", "white", [ "v0" ] ],
+    [ "dht1:SDA", "mega:10", "white", [ "v-38.4", "h346" ] ],
+    [ "btn2:2.l", "mega:38", "gray", [ "h0" ] ],
+    [ "bb1:bp.43", "btn2:1.r", "red", [ "v-0.9", "h75.2" ] ],
     [ "rgb1:R", "bb1:23b.h", "", [ "$bb" ] ],
     [ "rgb1:COM", "bb1:24b.i", "", [ "$bb" ] ],
     [ "rgb1:G", "bb1:25b.h", "", [ "$bb" ] ],
-    [ "rgb1:B", "bb1:26b.h", "", [ "$bb" ] ],
-    [ "btn2:2.l", "mega:38", "gray", [ "h0" ] ],
-    [ "bb1:bp.43", "btn2:1.r", "red", [ "v-0.9", "h75.2" ] ]
+    [ "rgb1:B", "bb1:26b.h", "", [ "$bb" ] ]
   ],
   "dependencies": {}
 }
